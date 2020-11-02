@@ -12,7 +12,7 @@ constexpr uint8_t greenLed = 7;
 constexpr uint8_t redLed = 6;
 constexpr uint8_t servoPin = 8;
 constexpr uint8_t buzzerPin = 5;
-String tagUID = "29 B9 ED 23";  // String to store UID of tag. Change it with your tag's UID
+String tagUID = "29 B9 ED 23";  // String to store UID of tag. 
 boolean RFIDMode = true;
 
 void setup() {
@@ -147,7 +147,7 @@ void send_message(String message)
 {
   SIM900.println("AT+CMGF=1");    //Set the GSM Module in Text Mode
   delay(100);
-  SIM900.println("AT+CMGS=\"+XXXXXXXXXXXX\""); // Replace it with your mobile number
+  SIM900.println("AT+CMGS=\"+XXXXXXXXXXXX\"");
   delay(100);
   SIM900.println(message);   // The SMS text you want to send
   delay(100);
